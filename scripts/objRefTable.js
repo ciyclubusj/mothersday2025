@@ -9,6 +9,10 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.Tween,
 		C3.Plugins.Audio,
 		C3.Plugins.Particles,
+		C3.Behaviors.Rotate,
+		C3.Behaviors.Sin,
+		C3.Plugins.Touch,
+		C3.Behaviors.Anchor,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Audio.Acts.Play,
 		C3.Behaviors.Tween.Acts.TweenOneProperty,
@@ -18,7 +22,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Behaviors.Tween.Acts.StopAllTweens,
 		C3.Behaviors.Tween.Acts.TweenTwoProperties,
-		C3.Plugins.System.Acts.GoToLayout
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.Touch.Cnds.IsTouchingObject,
+		C3.Behaviors.Platform.Acts.SimulateControl
 	];
 };
 self.C3_JsPropNameTable = [
@@ -37,8 +43,15 @@ self.C3_JsPropNameTable = [
 	{Sprite6: 0},
 	{TiledBackground3: 0},
 	{Particles: 0},
+	{Rotate: 0},
+	{Sine: 0},
 	{Sprite7: 0},
-	{Particles2: 0}
+	{Particles2: 0},
+	{Touch: 0},
+	{Anchor: 0},
+	{Sprite8: 0},
+	{Sprite9: 0},
+	{Sprite10: 0}
 ];
 
 self.InstanceType = {
@@ -54,5 +67,9 @@ self.InstanceType = {
 	TiledBackground3: class extends self.ITiledBackgroundInstance {},
 	Particles: class extends self.IParticlesInstance {},
 	Sprite7: class extends self.ISpriteInstance {},
-	Particles2: class extends self.IParticlesInstance {}
+	Particles2: class extends self.IParticlesInstance {},
+	Touch: class extends self.IInstance {},
+	Sprite8: class extends self.ISpriteInstance {},
+	Sprite9: class extends self.ISpriteInstance {},
+	Sprite10: class extends self.ISpriteInstance {}
 }
